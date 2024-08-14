@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+:root {
+    --primary-color: #9cb9c8;
+    --secondary-color: #698694;
+    --background-color: #fefaf6;
+    --text-color: #202930;
+    --accent-color: #b26855;
+  }
+  
+  html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    width: 100%;
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    margin: 0 auto; /* Center the body content */
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 0;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+  }
+  
+  .container {
+    width: 50%; /* Set the width to 1/3 of the total width */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    margin: 0 auto; /* Center the container */
+    flex: 1; /* Allow the container to grow and fill available space */
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 100%;
+    min-height: 60px; /* Ensure a minimum height */
+  }
+  
+  .header-left {
+    flex: 1; /* Ensure this takes up space even if empty */
+  }
+  
+  .header-left a {
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Ensure the link inherits the color from the parent */
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  }
+  
+  header nav ul li {
+    margin-left: 1rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  }
+  
+  nav a:hover {
+    color: var(--accent-color);
+  }
+  
+  h1, h2, h3 {
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: var(--background-color);
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+  }
+  
+  h3 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+  }
+  
+  p, ul, li {
+    margin-bottom: 1rem;
+    font-family: Lora, ui-serif, serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+    font-size: 1rem;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .btn:hover {
+    color: var(--accent-color);
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .footer-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: auto; /* Push the footer to the bottom */
+  }
+  
+  footer {
+    flex-shrink: 0;
+    background-color: transparent; /* Change this */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    width: 100%;
+  }
+  
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%; /* Set the width to 1/3 of the total width */
+    max-width: 100%; /* Ensure it doesn't exceed the viewport width */
+    margin: 0 auto; /* Center the container */
+    background-color: var(--primary-color); /* Add this */
+    padding: 1rem; /* Add this */
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  footer nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  }
+  
+  footer nav ul li {
+    margin-right: 20px;
+  }
+  
+  footer nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    font-family: Inter, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
+  }
+  
+  footer a:hover {
+    color: var(--accent-color);
+  }
+  
+  .social-links a {
+    margin-left: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+    }
+    
+    nav ul {
+      margin-top: 1rem;
+    }
+    
+    footer .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer nav ul {
+        margin: 20px 0;
+    }
+
+    .social-links {
+        margin-top: 20px;
+    }
+  }
