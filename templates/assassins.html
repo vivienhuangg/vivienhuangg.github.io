@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assassins</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Names</h1>
+        <form id="namesForm">
+            <textarea id="namesInput" rows="10" cols="30" placeholder="Enter each name on a new line"></textarea>
+            <button type="submit">Assign Targets</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script>
+        document.getElementById('namesForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const names = document.getElementById('namesInput').value.split('\n').filter(name => name.trim() !== '');
+            fetch('/assign', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ names })
+            })
+            .then(response => response.json())
+            .then(data => {
+                const resultDiv = document.getElementById('result');
+                if (data.error) {
+                    resultDiv.textContent = `Error: ${data.error}`;
+                } else {
+                    resultDiv.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

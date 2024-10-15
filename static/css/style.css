@@ -215,25 +215,3 @@
     margin-left: 10px;
   }
   
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-    }
-    
-    nav ul {
-      margin-top: 1rem;
-    }
-    
-    footer .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    footer nav ul {
-        margin: 20px 0;
-    }
-
-    .social-links {
-        margin-top: 20px;
-    }
-  }
