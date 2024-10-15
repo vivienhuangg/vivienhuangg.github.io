@@ -9,18 +9,16 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('templates/about.html')
 
 @app.route('/projects')
 def projects():
-    return render_template('projects.html')
-
-
+    return render_template('templates/projects.html')
 
 
 @app.route('/assassins')
 def assassins():
-    return render_template('assassins.html')
+    return render_template('templates/assassins.html')
 
 @app.route('/assassins_assign', methods=['POST'])
 def assign():
